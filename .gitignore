@@ -7,3 +7,5 @@
 .idea/modules.xml
 .idea/vcs.xml
 .idea/workspace.xml
+proxy/src/main/resources/
+src/main/java/indi/solomon/pattern/proxy/
