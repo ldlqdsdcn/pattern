@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pattern</artifactId>
+        <groupId>inid.dalei</groupId>
+        <version>1.0</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>inid.dalei</groupId>
-    <artifactId>pattern</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0</version>
-    <modules>
-        <module>proxy</module>
-    </modules>
+    <description>代码模式代码</description>
+    <artifactId>pattern_proxy</artifactId>
 
 
 </project>
