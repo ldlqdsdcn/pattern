@@ -35,7 +35,6 @@ public class RSASimple {
        System.out.println("求余数："+(e*d-1)%fenN);
         BigInteger msg=new BigInteger("65");
 
-        long message=65;
         System.out.println("message="+msg);
         //公钥加密 私钥解密
         System.out.println("公钥加密 私钥解密");
