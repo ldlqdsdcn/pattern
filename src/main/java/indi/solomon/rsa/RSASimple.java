@@ -36,7 +36,9 @@ public class RSASimple {
         BigInteger msg=new BigInteger("65");
 
         long message=65;
-        System.out.println("message="+65);
+        System.out.println("message="+msg);
+        //公钥加密 私钥解密
+        System.out.println("公钥加密 私钥解密");
        BigInteger encode= msg.pow(e).mod(new BigInteger(baseNum+""));
         //long encode=Math.round(Math.pow(message, e)) % baseNum;
         System.out.println("encode-="+encode);
@@ -44,14 +46,15 @@ public class RSASimple {
        // long decode=Math.round(Math.pow(encode,d))%baseNum;
         BigInteger decode=encode.pow(d).mod(new BigInteger(baseNum+""));
         System.out.println("decode-="+decode);
+        //私钥加密 公钥解密
+        System.out.println("私钥加密，公钥解密：");
+        msg=new BigInteger("66");
+        System.out.println("message="+msg);
+        encode= msg.pow(d).mod(new BigInteger(baseNum+""));
+        System.out.println("private encode="+encode);
+        decode=encode.pow(e).mod(new BigInteger(baseNum+""));
+        System.out.println("public decode="+decode);
 
-        for(int i=2;i<196451153340722663l  ;i++)
-        {
-            if(196451153340722663l%i==0)
-            {
-                System.out.println(i);
-            }
-        }
     }
 
     /**
