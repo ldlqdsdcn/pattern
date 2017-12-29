@@ -36,7 +36,7 @@ public class RSA {
         //密钥
         int keyD = 7;
         //未加密的数据
-        long msg = 24L;
+        long msg = 2L;
         //加密后的数据
         long encodeMsg = rsa(baseNum, keyE, msg);
         //解密后的数据
@@ -51,6 +51,31 @@ public class RSA {
     public static char byteToChar(byte[] b) {
         char c = (char) (((b[0] & 0xFF) << 8) | (b[1] & 0xFF));
         return c;
+    }
+
+    /**
+     * 如果两个正整数a和n互质，那么一定可以找到整数b，使得 ab-1 被n整除，或者说ab被n除的余数是1。这时，b就叫做a的“模反元素”。
+     * @param a
+     * @param n
+     * @return
+     */
+    public static long getMofan(int a,int n)
+    {
+        for(int i=2;i<a*n;i++)
+        {
+            if((i*a-1)%n==0)
+            {
+                return i;
+            }
+        }
+        for(int i=-2;i>0-a*n;i--)
+        {
+            if((i*a-1)%n==0)
+            {
+                return i;
+            }
+        }
+        throw new IllegalStateException("找不到模反元素");
     }
 
 }
